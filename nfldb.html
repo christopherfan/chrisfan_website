@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Christopher Fan's NFL Recommender</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="css/bootstrap_dark.css" rel="stylesheet"> -->
+	<link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/cyborg/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+          <a class="navbar-brand" href="index.html">Christopher Fan's Graduate School Project Portfolio</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html">About</a></li>
+            <li><a href="professional.html">Professional Experience</a></li>
+			<li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="gather_ring.html">GatherRing</a></li>
+                <li><a href="nfldb.html">Fantasy Football Picker</a></li>
+                <li><a href="urlShorty.html">urlShorty</a></li>
+                <li><a href="twitterproject.html">Hashtag Recommender</a></li>                
+				<li><a href="movie.html">Movie Together</a></li>     
+              </ul>
+            </li>
+
+ 
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+          <h1 class="page-header">Fantasy Football Advisor <small>Dec 2013</small></h1>
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Fantasy Football Analytics</li>
+          </ol>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-5">
+          <h3>Project Description</h3>
+          <p>Fantasy Football Advisor is a recommendation system that suggests the best playing team composition for a given week. The recommendation is based on a statistical matchup analysis between the players of the user's roster and the opponent to team would face that week. Based on the analysis, a player may be retained on the squad and benched, made to play or dropped from the team. If recommend to be dropped, the system provides a suitable player from the pool of available players to be substituted. The user can compare two players by viewing graphical representations of the key fantasy football statistics used to compute the recommendation.</p>
+          <h3>Team Members</h3>
+          <ul>
+            <li>Ramit Malhotra (Front End Development)</li>
+            <li>Pablo Arvizu (D3 Visualizations)</li>
+            <li>Chris Fan (Python Back End Development, Database Extraction/Transformation, Analysis Engine)</li>
+            <li>Ashwin Chandak (Recommendation/Analysis Logic)</li>
+          </ul>
+        </div>
+        <div class="col-md-7">
+          <img class="img-responsive" src="img/Project_img/nfl_recommendation.jpg">
+        </div>		
+      </div> <!-- row -->
+      <div class="row rowsection">
+
+        <div class="col-md-5">
+          <h3>Technical Details</h3>
+          <p>Written in Python, the analysis engine creates a recommendation for each fantasy football player by calculating a ranked score based the player’s past performance statistics and comparing it against the next week team defensive capability. Github: <a href="https://github.com/christopherfan/IOLab_NFL">https://github.com/christopherfan/IOLab_NFL</a></p>
+          <h3>Key Components</h3>
+          <ul>
+            <li> <b>Capturing NFL League Player Statistics:</b> Full NFL player statistics are stored in a PostgreSQL database propagated from the NFL.com game center JSON feed.  Database query engine leverages the <a href="https://github.com/BurntSushi/nfldb/wiki">nfldb</a> interface.</li>
+            <li><b>Team Roster Extraction:</b> Python engine can generate recommendations based on arbitrary rosters of nfl fantasy football team based off of text files</li>
+            <li><b>Statistical Analysis:</b> Capable of generating max 20k calculations based on performance of 32 NFL teams, 50 free agent players, and 140 fantasy football players across 15 performance statistics</li>
+            <li><b>Optimal Team Composition:</b> Engine calculates the optimal team composition maximizing total fantasy football points</li>
+          </ul>
+        </div>	  
+        <div class="col-md-7">
+          <a href="img/Project_img/script.jpg"><img class="img-responsive" src="img/Project_img/script.jpg"> </a>
+        </div>
+      </div> <!-- row -->
+
+      <div class="row">
+
+        <div class="col-lg-12">
+          <h3 class="page-header">Related Projects</h3>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+        	<a href="twitterproject.html"><img class="img-responsive img-customer" src="img/thumbnails/hashtag_recommender.jpg"></a>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+        	<a href="gather_ring.html"><img class="img-responsive img-customer" src="img/thumbnails/gatherRing.jpg"></a>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+        	<a href="movie.html"><img class="img-responsive img-customer" src="img/thumbnails/movie.jpg"></a>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+        	<a href="urlShorty.html"><img class="img-responsive img-customer" src="img/thumbnails/urlShorty.jpg"></a>
+        </div>
+      </div>
+
+
+      </div>
+
+    </div><!-- /.container -->
+
+    <div class="container">
+
+      <hr>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+			<p>Copyright &copy; Christopher Fan 2014</p>
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/modern-business.js"></script>
+
+  </body>
+</html>
